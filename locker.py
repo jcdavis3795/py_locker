@@ -42,7 +42,18 @@ if __name__ == '__main__':
     if sys.argv[1] == 'read':
         read.print_dict(sys.argv[2])
         sys.exit()
-
+        
+    if sys.argv[1] == 'key':
+        try:
+            crypto.decrypt_file('H:\code\py_locker\docs\my_passwords.encrypted',
+                                'H:\code\py_locker\docs\my_passwords.decrypted')
+        except FileNotFoundError:
+            response = input('are you sure you want to replace your fernet key? (y/n)')
+            if response == 'y':
+                key_gen.key_gen()
+            else:
+                print('key generation aborted')
+                
     if sys.argv[1] == 'encrypt':
         try:
             crypto.encrypt_file('H:\code\py_locker\docs\my_passwords.decrypted', 'H:\code\py_locker\docs\my_passwords.encrypted')
