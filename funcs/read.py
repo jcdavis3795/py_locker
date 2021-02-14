@@ -34,11 +34,16 @@ except FileNotFoundError:
 # password for any given service they will all be printed, but only the last one will be copied to the clipboard
 def print_dict(service):
 
-    for x in data:
-        if service in x.keys():
-            password = (x[service])
-            pyperclip.copy(password)
-            print(password)
-            print('password copied to clipboard')
+    try:
+        for x in data:
+            if service in x.keys():
+                password = (x[service])
+                pyperclip.copy(password)
+                
+                print(password)
+                print('password copied to clipboard')
+                
+    except KeyError:
+        print('service not found')
 
 
