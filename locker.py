@@ -9,6 +9,7 @@ except FileNotFoundError:
     pass
 
 if __name__ == '__main__':
+    
     if len(sys.argv) < 2:
         print( 'Usage:\npython3 locker.py [create] [service] [password length] - generates a password for a specified '
                'service and stores it in the locker \n'
