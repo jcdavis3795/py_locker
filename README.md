@@ -24,14 +24,19 @@ The usage for these commands are as follows:
 *from the py_locker directory*
 
 python3 locker.py create [service] [password length] - generates a password for a specified service and stores it in the locker
+
 python3 locker.py input [service] [password] - input a service and password you already know
+
 python3 locker.py generate [password length] - generates a password of specified length between 16 -32 and copied to clipboard
+
 python3 locker.py read [service] - copies account password to clipboard
+
 python3 locker.py key - will generate a new fernet key to store in key.key
+
 python3 locker.py decrypt - if the my_passwords file is currently encrypted, this will decrypt it
+
 python3 locker.py encrypt - if the my_passwords file is currently decrypted, this will encrypt it
 
 Running the program without arguments will return a the command option list as well.
-
 The my_passwords file is automatically encrypted after each use, the encrypt and decrypt commands are there in case something unexpected happens. If you want 
 to know how everything works, the files have all been commented explaining the use and purpose of each function.
