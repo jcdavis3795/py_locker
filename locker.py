@@ -18,6 +18,7 @@ if __name__ == '__main__':
                'and copied to clipboard'
                '\n'
                'python3 locker.py read [service] - copies account password to clipboard \n'
+               'python3 locker.py key - will generate a new fernet key to store in key.key'
                'python3 locker.py decrypt - if the my_passwords file is currently encrypted, this will decrypt it \n'
                'python3 locker.py encrypt - if the my_passwords file is currently decrypted, this will encrypt it')
         sys.exit()
