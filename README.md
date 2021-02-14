@@ -19,7 +19,7 @@ key
 decrypt
 encrypt
 
-The usage for these commands are as follows:
+The usage for these commands(in Windows) are as follows:
 
 *from the py_locker directory*
 
