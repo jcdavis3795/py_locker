@@ -13,6 +13,7 @@ if __name__ == '__main__':
     if len(sys.argv) < 2:
         print( 'Usage:\npython3 locker.py [create] [service] [password length] - generates a password for a specified '
                'service and stores it in the locker \n'
+               'python3 locker.py input [service] [password] - input a service and password you already know'
                'python3 locker.py generate [password length] - generates a password of specified length between 16 -32 '
                'and copied to clipboard'
                '\n'
@@ -23,8 +24,14 @@ if __name__ == '__main__':
 
     if sys.argv[1] == 'create':
         create_entry.create_entry(sys.argv[2], gen_pswd.gen_pswd(int(sys.argv[3])))
+        print('Entry creation successful')
         sys.exit()
-
+        
+    if sys.argv[1] == 'input':
+        create_entry.create_entry(sys.argv[2], sys.argv[3])
+        print('Input successful')
+        sys.exit()   
+        
     if sys.argv[1] == 'generate':
         password = gen_pswd.gen_pswd(int(sys.argv[2]))
         pyperclip.copy(password)
