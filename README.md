@@ -48,3 +48,5 @@ to know how everything works, the files have all been commented explaining the u
 RUNNING FOR THE FIRST TIME:
 
   The first thing you will want to do when running locker.py for the first time is is call the 'key' command. This will generate your fernet key in key.key. After doing this, you can use all the other features of the program normally. Not generating a key first will cause the program to not function.
+
+  The default path for the project(and thus the location of my_passwords and key.key) is H:\code\py_locker. You will want to go through and adjust the script so that the path to \py_locker is correct.
