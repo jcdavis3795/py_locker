@@ -7,7 +7,6 @@ This program also has the ability to encrypt the my_passwords file using a ferne
 the key_gen() function in the key_gen module. This key will be stored in ..\docs\key.key. Only call key_gen() once - if you encrypt a file with a key and then
 change the key, you will not be able to decrypt the locker. If you need to change the key, only call key_gen() while the my_passwords file is decrypted.
 You can also create this key from the command line with the 'key' command, which will ensure your file is decrypted.
-
 You run this program the way you would normally run a python script from the command line, followed by some additional argument options.
 
 The command options for this program are: 
@@ -25,17 +24,11 @@ The usage for these commands are as follows:
 *from the py_locker directory*
 
 python3 locker.py create [service] [password length] - generates a password for a specified service and stores it in the locker
-
 python3 locker.py input [service] [password] - input a service and password you already know
-
 python3 locker.py generate [password length] - generates a password of specified length between 16 -32 and copied to clipboard
-
 python3 locker.py read [service] - copies account password to clipboard
-
 python3 locker.py key - will generate a new fernet key to store in key.key
-
 python3 locker.py decrypt - if the my_passwords file is currently encrypted, this will decrypt it
-
 python3 locker.py encrypt - if the my_passwords file is currently decrypted, this will encrypt it
 
 Running the program without arguments will return a the command option list as well.
